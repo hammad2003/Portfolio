@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="assets/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../product.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <div id="perfil">
+        <img src="https://github.com/hammad2003/MACACOS-DO-BRASIL/blob/master/FOTOS/MACACO.png?raw=true" alt="Profile Picture">
+        <h1>My Portfolio</h1>
+      </div>      
+    
+      <div class="row">
+        {% for project in projects %}
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <p><strong>Technologies:</strong> {{ project.technologies }}</p>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <p>No projects found</p>
+        {% endfor %}
+      </div>
+      
+    </div>
+
+    <script src="assets/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+#perfil {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#perfil h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+#perfil img {
+  margin-right: 1em;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones al ser redonda */
+  border: 2px solid #ddd; /* Opcional: Un borde para la imagen */
+}
