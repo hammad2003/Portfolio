@@ -12,7 +12,6 @@ class ProjectController {
 
     public function getProjects() {
         try {
-            // Consultar los proyectos y sus tecnologías asociadas
             $sql = "
                 SELECT Project.id, Project.name, Project.description, 
                        GROUP_CONCAT(Technology.name SEPARATOR ', ') as technologies
